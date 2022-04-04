@@ -15,8 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag node-chrome-git:$(date +%s)
-    - name: Tag the Docker image
-      run: docker tag node-chrome-git:$(date +%s) nxtman/node-chrome-git:$(date +%s)
+      run: docker build . --file Dockerfile --tag nxtman/node-chrome-git:$(date +%s)
     - name: Publish image
       run: docker push nxtman/node-chrome-git:$(date +%s)
