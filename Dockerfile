@@ -27,7 +27,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/main" > /etc/apk/repositorie
 # Add Chrome as a user
 RUN mkdir -p /usr/src/app \
     && adduser -D chrome \
-    && chown -R chrome:chrome /usr/src/app \
+    && chown -R chrome:chrome /usr/src/app
 
 # Run Chrome as non-privileged
 USER chrome
